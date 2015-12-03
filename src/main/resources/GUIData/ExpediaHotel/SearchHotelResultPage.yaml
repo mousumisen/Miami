@@ -1,0 +1,41 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+pageTitle:
+  US: "Expedia: Hotel Search"
+  
+elements:
+  sortByPriceButton:
+    locators:
+      US: "css=li:nth-child(2) .btn-sort.tab"
+  resultsContainer:
+    locators:
+      US: "css=article[id^='hotel']"
+    containerElements:
+      selectLink:
+        locators:
+          US: "css=article[id^='hotel'] a"
+  ratingContainer:
+    locators:
+      US: "css=.filterContainer"
+    containerElements:
+      sortBuyRatingFiveStarCheckBox:
+        locators:
+          US: "css=input[id='star5']"
+      sortBuyRatingFourStarCheckBox:
+        locators:
+          US: "css=input[id='star4']"
+  searchHotelTextField:
+    locators:
+      US: "css=#inpHotelNameMirror"
+  searchHotelListLink:
+    locators:
+      US: "css=#aria-option-0"
+  searchHotelButton:
+    locators:
+      US: "css=.cssRow div button"
+       
+pageValidators: [
+  resultsContainer.isVisible  
+  ]
+              
+defaultLocale: "US"   
+
